@@ -1,0 +1,51 @@
+bump_version: null
+lint:
+  files_exist:
+  - conf/igenomes.config
+  - conf/igenomes_ignored.config
+  - assets/multiqc_config.yml
+  - conf/igenomes.config
+  - conf/igenomes_ignored.config
+  - assets/multiqc_config.yml
+  - CODE_OF_CONDUCT.md
+  - assets/nf-core-getgenomes_logo_light.png
+  - docs/images/nf-core-getgenomes_logo_light.png
+  - docs/images/nf-core-getgenomes_logo_dark.png
+  - .github/ISSUE_TEMPLATE/config.yml
+  - .github/workflows/awstest.yml
+  - .github/workflows/awsfulltest.yml
+  files_unchanged:
+  - .github/CONTRIBUTING.md
+  - assets/sendmail_template.txt
+  - .github/CONTRIBUTING.md
+  - assets/sendmail_template.txt
+  - CODE_OF_CONDUCT.md
+  - assets/nf-core-getgenomes_logo_light.png
+  - docs/images/nf-core-getgenomes_logo_light.png
+  - docs/images/nf-core-getgenomes_logo_dark.png
+  - .github/ISSUE_TEMPLATE/bug_report.yml
+  multiqc_config: false
+  nextflow_config:
+  - manifest.name
+  - manifest.homePage
+  - validation.help.beforeText
+  - validation.help.afterText
+  - validation.summary.beforeText
+  - validation.summary.afterText
+nf_core_version: 3.0.2
+org_path: null
+repository_type: pipeline
+template:
+  author: Igor Trujnara
+  description: Download genomes from databases on a cluster
+  force: true
+  is_nfcore: false
+  name: getgenomes
+  org: itrujnara
+  outdir: .
+  skip_features:
+  - igenomes
+  - multiqc
+  - fastqc
+  version: 1.0.0dev
+update: null
