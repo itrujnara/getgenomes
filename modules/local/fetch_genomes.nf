@@ -24,7 +24,7 @@ process FETCH_GENOMES {
     for id in \$(cat ${ids}); do
         id_suffix=\$(echo \${id} | awk -F'_' '{print \$NF}')
         mkdir -p \${id}
-        curl -sSL ${base_url}/\${id}/\${id_suffix}.genome.fasta.gz -o \${id}/\${id_suffix}.fasta.gz
+        curl --retry 3 -sSL ${base_url}/\${id}/\${id_suffix}.genome.fasta.gz -o \${id}/\${id_suffix}.fasta.gz
     done
 
     # Print the software versions
